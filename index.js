@@ -14,6 +14,11 @@ const overlay = document.querySelector(".overlay");
 const cartImage = document.querySelector(".cart-img");
 const cartContent = document.querySelector(".drop");
 const summary = document.querySelector(".price-summary");
+const empty = document.querySelector(".empty-cart");
+const message = document.querySelector(".empty-message");
+const productMessage = document.querySelector(".drop-section");
+const checkout = document.querySelector(".checkout-button");
+const bin = document.querySelector(".bin");
 
 console.log(quantity.textContent)
 /*------ add/minus button------*/
@@ -34,18 +39,47 @@ minus.addEventListener("click", () => {
 })
 
 
+
 toCart.addEventListener("click", () => {
     cartNo.textContent = quantity.textContent;
-    
+
     summary.textContent = `$125.00 x ${quantity.textContent} $ ${125.00 * quantity.textContent}.00`;
 })
 
-exitPage.addEventListener("click", ()=> {
+cartImage.addEventListener("click", () => {
+    // cartContent.classList.toggle("hidden");
+    if (cartNo.textContent === "0") {
+        cartContent.classList.toggle("hidden");
+        // console.log("lol")
+        productMessage.classList.add("hidden");
+        message.classList.remove("hidden");
+        checkout.classList.add("hidden")
+
+    } else {
+        cartContent.classList.toggle("hidden");
+        productMessage.classList.remove("hidden");
+        message.classList.add("hidden");
+        checkout.classList.remove("hidden")
+    }
+
+})
+
+bin.addEventListener("click", () => {
+    productMessage.classList.add("hidden");
+    message.classList.remove("hidden");
+    checkout.classList.add("hidden");
+    cartNo.textContent = 0;
+    quantity.textContent = 0;
+})
+
+
+
+exitPage.addEventListener("click", () => {
     page2.classList.add("hidden");
     overlay.classList.add("hidden")
 })
 
-currentImage.addEventListener("click", ()=> {
+currentImage.addEventListener("click", () => {
     page2.classList.remove("hidden")
     overlay.classList.remove("hidden")
 })
@@ -85,6 +119,4 @@ for (let i = 0; i < sma.length; i++) {
     })
 }
 
-cartImage.addEventListener("click", ()=> {
-    cartContent.classList.toggle("hidden");
-})
+
