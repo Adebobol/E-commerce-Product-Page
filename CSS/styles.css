@@ -207,6 +207,15 @@ ul {
     border-radius: 15px;
     position: relative;
 }
+.nex {
+    display: none;
+}
+
+.prev {
+    display: none;
+}
+
+
 
 #slides {
     display: flex;
@@ -341,6 +350,19 @@ h1 {
     z-index: 15;
 }
 
+#main-2 {
+    width: 75%;
+    height: auto;
+    margin-bottom: 30px;
+    /* height: 80%; */
+}
+
+.ma {
+    width: 100%;
+    border-radius: 15px;
+    position: relative;
+}
+
 .sm {
     width: 20%;
     border-radius: 10px;
@@ -429,7 +451,7 @@ h1 {
     }
 
     .description {
-        padding: 0px 12%;
+        padding: 0px 15%;
         /* padding: 5%; */
     }
 
@@ -541,5 +563,50 @@ h1 {
     .navbar {
         padding: 0px 40px;
     }
+
+    /* ---PRODUCT IMAGE BUTTON-- */
+
+    .nex {
+        position: absolute;
+        margin-top: 30%;
+        margin-left: 78%;
+        background-color: white;
+        width: 40px;
+        height: 40px;
+        z-index: 20;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        justify-content: center;
+        text-align: center;
+        border-radius: 100%;
+        background-color: white;
+        /* color: blue; */
+
+    }
+
+    .prev {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        justify-content: center;
+        text-align: center;
+        border-radius: 100%;
+        margin-top: 30%;
+        margin-left: 3%;
+        background-color: white;
+        width: 40px;
+        height: 40px;
+        z-index: 20;
+    }
+
+    /* -----CONTENT 2----- */
+    .content-2 {
+        display: none;
+    }
+    .overlay {
+        display: none;
+    }
+
 
 }
