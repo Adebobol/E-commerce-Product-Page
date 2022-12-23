@@ -419,15 +419,21 @@ h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    /* background-color: rgba(0, 0, 0, 0.6); */
+    background-color: hsl(0, 0%, 0%);
+    opacity: 75%;
     /* background-color: hsl(25, 100%, 94%); */
-    backdrop-filter: blur(3px);
+    /* backdrop-filter: blur(3px); */
     z-index: 10;
 }
 
 .act {
     border: 2px solid hsl(26, 100%, 55%);
     opacity: 0.8;
+}
+
+.expose {
+    display: block;
 }
 
 
@@ -569,7 +575,7 @@ h1 {
     .nex {
         position: absolute;
         margin-top: 30%;
-        margin-left: 78%;
+        margin-left: 80%;
         background-color: white;
         width: 40px;
         height: 40px;
@@ -593,7 +599,7 @@ h1 {
         text-align: center;
         border-radius: 100%;
         margin-top: 30%;
-        margin-left: 3%;
+        margin-left: 1%;
         background-color: white;
         width: 40px;
         height: 40px;
@@ -607,6 +613,66 @@ h1 {
     .overlay {
         display: none;
     }
+
+    /* ----DROP- */
+
+    .drop {
+        position: absolute;
+        z-index: 3;
+        width: 80%;
+        height: 40%;
+        margin-top: 90%;
+        margin-left: 1%;
+        background-color: hsl(25, 100%, 94%);
+        /* box-shadow: 2px black; */
+        border-radius: 10px;
+    }
+    
+    /* .empty-message { */
+        /* display: flex; */
+        /* text-align: center; */
+        /* align-items: center; */
+        /* justify-content: center; */
+        /* padding: 15%; */
+    /* } */
+    
+    .dropsmall-pro {
+        width: 15%;
+        /* border-radius: 10px; */
+        margin-right: 10px;
+    }
+    
+    .drop-cart {
+        padding-bottom: 5px;
+    }
+    
+    .drop-section {
+        align-items: center;
+        /* justify-content: space-between; */
+        margin: 5%;
+    }
+    
+    .drop-price {
+        display: flex;
+        flex-direction: column;
+        margin-right: 5px;
+    }
+    
+    
+    
+    .checkout-button {
+        display: none;
+        width: 100%;
+        background-color: hsl(26, 100%, 55%);
+        color: white;
+        height: 40px;
+        border-radius: 10px;
+        margin: 10px 0px 30px;
+    }
+    
+    /* DROP */
+    
+
 
 
 }
